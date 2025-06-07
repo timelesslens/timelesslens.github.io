@@ -1,11 +1,11 @@
 ---
 date: '2025-06-07T18:51:30+08:00'
 draft: false
-title: '2025-05-31 青岛建筑'
+title: '青岛建筑'
 cover:
   image: "https://plus.unsplash.com/premium_photo-1671211266680-c2caa5410393?q=80&w=4288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" # 您可以使用文章中已有的图片或其他图片
   relative: false # 使用绝对路径而非相对路径
 ---
 
-![青岛建筑](https://plus.unsplash.com/premium_photo-1671211266680-c2caa5410393?q=80&w=4288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+![青岛建筑](https://github.com/timelesslens/pic01/blob/main/2025-05-30%E9%9D%92%E5%B2%9B/1749295672035.jpg?raw=true)
 
