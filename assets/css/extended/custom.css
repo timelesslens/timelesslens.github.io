@@ -1,0 +1,52 @@
+/* Custom styles added to demo */
+
+.twitter-tweet {
+    margin: auto;
+}
+
+iframe {
+    border-radius: var(--radius) !important;
+}
+
+.home-info ul {
+    padding-inline-start: 20px;
+}
+
+.entry-cover img {
+    border: 1px solid var(--border);
+}
+
+/* 修改首页背景颜色 */
+/* 设置首页背景图片 */
+.main .profile {
+    /* background-image: url('/images/background.png'); /* 图片路径，以 /static 目录为根目录 */
+    /* background-size: cover; /* 覆盖整个区域 */
+    /* background-position: center; 居中显示 */
+    /* background-repeat: no-repeat; 不重复 */ 
+    /* background-color: #f0f0f0; 浅色模式下的背景颜色 */
+    background-color: #dee2de; /* 浅色模式下的背景颜色 */
+}
+
+/* 如果您使用暗色模式，也可以为暗色模式设置不同的背景颜色 */
+.dark .main .profile {
+    /* background-color: #333; 暗色模式下的背景颜色 */
+    background-color: #282832; /* 暗色模式下的背景颜色 */
+
+    
+}
+
+/* 修改浅色模式下的外框颜色 */
+:root {
+    --code-bg: rgb(222, 226, 222); /* 更改为您想要的颜色 */
+}
+
+/* 修改深色模式下的外框颜色 */
+.dark {
+    --theme: rgb(40, 40, 50); /* 更改为您想要的深色模式颜色 */
+}
+
+.profile-mode .signature {
+    display: block;
+    text-align: right;
+    margin-top: 1em; /* 可选的顶部间距 */
+  }
