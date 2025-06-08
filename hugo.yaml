@@ -40,6 +40,10 @@ params:
   showtoc: false
   tocopen: false
 
+  
+  customCSS:
+    - css/extended/custom.css
+
 
   assets:
     # disableHLJS: true # to disable highlight.js

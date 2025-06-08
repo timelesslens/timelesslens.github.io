@@ -79,27 +79,67 @@ iframe {
   }
 
 /* 图片排版优化 */
-/* 图片自动排版：横图两张一行，竖图三张一行 */
+/* 图片手动排版： */
+/* 图片网格布局系统 */
 .image-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 1rem;
-  }
-  
-  .image-grid img {
-    width: 100%;
+    gap: 8px;
+    margin-bottom: 1.5em;
+    justify-content: center; /* 图片居中 */
+}
+
+/* 图片基础样式 */
+.image-grid img {
     height: auto;
     object-fit: cover;
     border-radius: 6px;
-  }
-  
-  .image-grid img.landscape {
-    width: calc(50% - 5px);
-  }
-  
-  .image-grid img.portrait {
-    width: calc(33.333% - 6.66px);
-  }
+    transition: transform 0.3s ease; /* 添加悬停效果 */
+    box-sizing: border-box;
+}
+
+/* 三张一行 */
+.image-row-3 img {
+    flex: 1 1 calc(33.333% - 8px); /* 自动分配宽度 */
+    max-width: calc(33.333% - 8px); /* 确保不超过比例 */
+}
+
+/* 两张一行 */
+.image-row-2 img {
+    flex: 1 1 calc(50% - 8px); /* 自动分配宽度 */
+    max-width: calc(50% - 8px); /* 确保不超过比例 */
+}
+
+/* 一张一行 */
+.image-row-1 img {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+/* 添加图片悬停效果 */
+.image-grid img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 响应式优化 */
+@media (max-width: 900px) {
+    .image-row-3 img {
+        flex: 1 1 calc(50% - 8px); /* 中等屏幕三列变两列 */
+        max-width: calc(50% - 8px);
+    }
+}
+
+@media (max-width: 600px) {
+    .image-grid img {
+        flex: 1 1 100% !important; /* 移动端全宽 */
+        max-width: 100% !important;
+    }
+}
+
+/* 封面图片单独样式 */
+.entry-cover {
+    margin-bottom: 2rem; /* 封面下增加间距 */
+}
   
   
