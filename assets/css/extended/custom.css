@@ -143,3 +143,76 @@ iframe {
 }
   
   
+/* ======= 列表页封面大小调整 ======= */
+.list .entries .entry {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.list .entries .entry-header {
+    flex: 1;
+    padding-right: 1.5rem;
+}
+
+.list .entries .entry-cover {
+    width: 180px;
+    height: 120px;
+    min-width: 180px;
+    margin-top: 0.2rem;
+}
+
+.list .entries .entry-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* 添加与您现有样式匹配的阴影 */
+}
+
+/* 悬停效果 - 与图片网格一致 */
+.list .entries .entry-cover {
+    transition: transform 0.3s ease;
+}
+
+.list .entries .entry:hover .entry-cover {
+    transform: scale(1.03);
+}
+
+/* 移动端适配 - 整合到您现有的媒体查询 */
+@media (max-width: 768px) {
+    .list .entries .entry {
+        flex-direction: column;
+    }
+    
+    .list .entries .entry-cover {
+        width: 100%;
+        height: 200px;
+        margin-top: 1rem;
+        margin-left: 0;
+        order: 2;
+    }
+    
+    /* 覆盖您现有的主内容区响应式 */
+    main.main {
+        max-width: 100% !important;
+        padding: 0 1rem;
+    }
+}
+
+/* ======= 优化现有单图封面 ======= */
+.entry-cover {
+    margin-bottom: 2rem;
+    border-radius: var(--radius);
+    overflow: hidden; /* 使圆角生效 */
+}
+
+.entry-cover img {
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease; /* 与整体风格一致 */
+}
+
+.entry-cover:hover img {
+    transform: scale(1.03);
+}
