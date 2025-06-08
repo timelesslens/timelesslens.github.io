@@ -50,3 +50,56 @@ iframe {
     text-align: right;
     margin-top: 1em; /* 可选的顶部间距 */
   }
+
+/* 更改宽度 */
+/* --- 全局默认宽度控制（可选）--- */
+.main {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* --- 列表页宽度（如 /posts/）--- */
+  body.list main.main {
+    max-width: 900px !important;
+    /* border: 1px dashed blue; */ /* <- 可选调试用 */
+  }
+  
+  /* --- 单篇文章页宽度 --- */
+  body.single main.main {
+    max-width: 900px !important;
+    border: 1px dashed red; /* <- 可选调试用 */
+  }
+  
+  /* --- 响应式支持（移动端适配）--- */
+  @media screen and (max-width: 768px) {
+    main.main {
+      max-width: 100% !important;
+      padding: 0 1rem;
+    }
+  }
+
+/* 图片排版优化 */
+/* 图片自动排版：横图两张一行，竖图三张一行 */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .image-grid img.landscape {
+    width: calc(50% - 5px);
+  }
+  
+  .image-grid img.portrait {
+    width: calc(33.333% - 6.66px);
+  }
+  
+  
