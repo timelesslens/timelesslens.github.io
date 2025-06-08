@@ -17,6 +17,7 @@ Hi, 欢迎访问。
 “Timeless Lens” 直译的话就是“永恒的镜头”。写了两句话，来表达我的想法：
 
 *Computers turn memory into speed.*
+
 *Cameras turn memory into memory.*
 
 
